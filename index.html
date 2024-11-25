@@ -15,7 +15,14 @@
       <h2>Forecast</h2>
       <section id="forecast"></section>
       <form action=".">
+        <label for="locationInput">Location</label>
         <input type="text" id="locationInput" value="Moscow" />
+        <label for="unitGroup">Unit system</label>
+        <select name="unitGroup" id="unitGroup">
+          <option value="metric" default>Metric (°C, km)</option>
+          <option value="us" default>US (°F, miles)</option>
+          <option value="uk" default>UK (°C, miles)</option>
+        </select>
         <button type="submit" id="retreiveDataBtn">Get data!</button>
       </form>
     </main>

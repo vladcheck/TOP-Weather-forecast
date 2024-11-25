@@ -30,7 +30,7 @@ Object.defineProperty(String.prototype, "separateWords", {
   enumerable: false,
 });
 
-async function getData(location, unitGroup = "metric") {
+async function getData(location, unitGroup) {
   try {
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unitGroup}&include=current&key=${KEY}&contentType=json`,
@@ -59,9 +59,10 @@ async function getData(location, unitGroup = "metric") {
 const forecastSection = document.getElementById("forecast");
 const locationInput = document.getElementById("locationInput");
 const retreiveDataBtn = document.getElementById("retreiveDataBtn");
+const unitGroupSelect = document.getElementById("unitGroup");
 retreiveDataBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-  const dataObj = await getData(locationInput.value);
+  const dataObj = await getData(locationInput.value, unitGroupSelect.value);
   forecastSection.textContent = "";
 
   for (let [key, value] of Object.entries(dataObj)) {
