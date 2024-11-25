@@ -6,16 +6,53 @@
   box-sizing: border-box;
 }
 
-form {
-  background-color: aliceblue;
-  padding: 10px;
+body {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
   gap: 5px;
 }
 
 #retreiveDataBtn {
   width: max-content;
-  padding: 2px 6px;
+  padding: 4px 10px;
+  border: none;
+  background-color: rgb(121, 121, 214);
+  color: rgb(240, 242, 252);
+  border-radius: 2px;
+}
+
+#retreiveDataBtn:hover {
+  background-color: rgb(107, 107, 188);
+}
+
+#retreiveDataBtn:active {
+  background-color: rgb(86, 86, 151);
+}
+
+#forecast {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: rgb(80, 87, 88);
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+a:visited {
+  color: rgb(121, 121, 214);
 }
