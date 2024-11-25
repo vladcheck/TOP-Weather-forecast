@@ -25,7 +25,7 @@ Object.defineProperty(String.prototype, "separateWords", {
       result += (word === words[0] ? word : word.toLowerCase()) + " ";
     }
 
-    return result;
+    return result.trimEnd();
   },
   enumerable: false,
 });
