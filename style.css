@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+form {
+  background-color: aliceblue;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 5px;
+}
+
+#retreiveDataBtn {
+  width: max-content;
+  padding: 2px 6px;
+}
