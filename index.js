@@ -61,9 +61,8 @@ const locationInput = document.getElementById("locationInput");
 const retreiveDataBtn = document.getElementById("retreiveDataBtn");
 retreiveDataBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-  forecastSection.textContent = "";
-
   const dataObj = await getData(locationInput.value);
+  forecastSection.textContent = "";
 
   for (let [key, value] of Object.entries(dataObj)) {
     const p = document.createElement("p");
